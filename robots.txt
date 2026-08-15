@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /accept-invite
 
 # AI assistants / answer engines — explicitly allowed for citation and discovery
 User-agent: GPTBot
