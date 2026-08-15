@@ -1,8 +1,44 @@
 /* Book a Secure Demo */
+const WEB3FORMS_ACCESS_KEY = "63dfb0ed-67e6-4111-84f1-9f4e0e544d8c";
+
 function DemoCTA(){
   const [sent, setSent] = React.useState(false);
-  const [f, setF] = React.useState({name:'',firm:'',email:'',interest:'',city:''});
+  const [sending, setSending] = React.useState(false);
+  const [err, setErr] = React.useState('');
+  const [f, setF] = React.useState({name:'',firm:'',email:'',interest:'',city:'',hp:''});
   const up = k => e => setF(s=>({...s,[k]:e.target.value}));
+  const submit = async (e) => {
+    e.preventDefault();
+    if (f.hp) return; // honeypot tripped, silently drop
+    setSending(true);
+    setErr('');
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: 'New Secure Demo request — Stemple CaseDesk',
+          from_name: 'Stemple CaseDesk website',
+          name: f.name,
+          firm: f.firm,
+          email: f.email,
+          city: f.city,
+          interest: f.interest,
+        }),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setSent(true);
+      } else {
+        setErr('Something went wrong sending your request. Please try again or email us directly.');
+      }
+    } catch (e2) {
+      setErr('Something went wrong sending your request. Please try again or email us directly.');
+    } finally {
+      setSending(false);
+    }
+  };
   React.useEffect(()=>{
     const h = (e)=>{ const city=e.detail&&e.detail.city; if(city) setF(s=>({...s,city})); };
     window.addEventListener('demo-prefill', h);
@@ -30,7 +66,8 @@ function DemoCTA(){
               <p style={{color:'rgba(255,255,255,.55)',fontSize:14}}>A member of our team will reach out to schedule your secure walkthrough.</p>
             </div>
           ) : (
-            <form onSubmit={e=>{e.preventDefault();setSent(true);}}>
+            <form onSubmit={submit}>
+              <input type="text" name="hp" value={f.hp} onChange={up('hp')} tabIndex="-1" autoComplete="off" style={{position:'absolute',left:'-9999px',width:1,height:1,opacity:0}} aria-hidden="true"/>
               <div className="field"><label>Full name</label><input required value={f.name} onChange={up('name')} placeholder="Adv. Priya Nair"/></div>
               <div className="field"><label>Firm / Organisation</label><input required value={f.firm} onChange={up('firm')} placeholder="Nair & Associates"/></div>
               <div className="field"><label>Work email</label><input type="email" required value={f.email} onChange={up('email')} placeholder="priya@firm.in"/></div>
@@ -51,7 +88,8 @@ function DemoCTA(){
                   <option>IP Management</option>
                 </select>
               </div>
-              <button className="submit" type="submit">Request Secure Demo →</button>
+              {err && <p style={{color:'#ff8080',fontSize:13,marginTop:-6,marginBottom:14}}>{err}</p>}
+              <button className="submit" type="submit" disabled={sending}>{sending ? 'Sending…' : 'Request Secure Demo →'}</button>
             </form>
           )}
         </div>
