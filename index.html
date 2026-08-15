@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="#1a2332"/><text x="50" y="60" font-family="Georgia,serif" font-size="42" font-weight="700" fill="#d4af37" text-anchor="middle">S</text></svg></template>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stemple — Case Desk | Zero-Knowledge Practice Management for Law Firms</title>
+<meta name="description" content="Stemple Case Desk — the command desk for live legal matters. Timelines, cause-list sync and citation verification inside a zero-knowledge vault, built for India's law firms.">
+
+<!-- ===== SEO — update the domain below to your production URL before deploy ===== -->
+<link rel="canonical" href="https://www.stemple.in/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Stemple">
+<meta name="keywords" content="legaltech, case management, zero-knowledge, law firm software, citation verification, India legal, matter management, GST billing, DPDP Act">
+<meta name="theme-color" content="#0b0d12">
+<meta name="color-scheme" content="light">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stemple">
+<meta property="og:url" content="https://www.stemple.in/">
+<meta property="og:title" content="Stemple — Where Judgment Meets Certainty">
+<meta property="og:description" content="The zero-knowledge command desk for India's law firms. Timelines, cause-list sync and citation verification inside an encrypted vault.">
+<meta property="og:image" content="https://www.stemple.in/assets/hero-mumbai.jpg">
+<meta property="og:image:alt" content="Stemple Case Desk">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Stemple — Where Judgment Meets Certainty">
+<meta name="twitter:description" content="The zero-knowledge command desk for India's law firms.">
+<meta name="twitter:image" content="https://www.stemple.in/assets/hero-mumbai.jpg">
+
+<!-- Icons / PWA -->
+<link rel="icon" href="assets/stemple-logo.jpeg" type="image/jpeg">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/stemple-logo.jpeg">
+<link rel="manifest" href="site.webmanifest">
+
+<!-- Structured data -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","@id":"https://www.stemple.in/#software","name":"Stemple Case Desk","applicationCategory":"BusinessApplication","applicationSubCategory":"Legal Practice Management Software","operatingSystem":"Web, Windows","url":"https://www.stemple.in/","image":"https://www.stemple.in/assets/hero-mumbai.jpg","description":"Zero-knowledge practice management and case desk for law firms — timelines, cause-list sync, citation verification and GST-compliant billing.","featureList":["Zero-knowledge, AES-256 encrypted case vault","Cause-list and hearing timeline sync","Automated legal citation verification","Passive time and billing capture","GST-compliant invoicing (CGST/SGST, GSTIN)","Offline-first courtroom mode","DPDP Act 2023 compliant"],"offers":{"@type":"Offer","category":"Demo","availability":"https://schema.org/InStock"},"areaServed":{"@type":"Country","name":"India"},"publisher":{"@id":"https://www.stemple.in/#organization"}},{"@type":"Organization","@id":"https://www.stemple.in/#organization","name":"Stemple","url":"https://www.stemple.in/","logo":"https://www.stemple.in/assets/stemple-logo.jpeg","email":"info@stemple.in","sameAs":["https://www.linkedin.com/company/stemple/"],"areaServed":"IN","contactPoint":{"@type":"ContactPoint","email":"info@stemple.in","contactType":"sales","areaServed":"IN"}},{"@type":"WebPage","@id":"https://www.stemple.in/#webpage","url":"https://www.stemple.in/","name":"Stemple — Case Desk | Zero-Knowledge Practice Management for Law Firms","description":"Stemple Case Desk — the command desk for live legal matters. Timelines, cause-list sync and citation verification inside a zero-knowledge vault, built for India's law firms.","inLanguage":"en-IN","isPartOf":{"@type":"WebSite","url":"https://www.stemple.in/","name":"Stemple"},"about":{"@id":"https://www.stemple.in/#organization"},"primaryImageOfPage":"https://www.stemple.in/assets/hero-mumbai.jpg"}]}
+</script>
+<!-- ===== /SEO ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<link rel="stylesheet" href="_ds/stemple-design-system-8b712a08-82bc-44db-a920-2b4144103ef1/tokens/fonts.css">
+<link rel="stylesheet" href="_ds/stemple-design-system-8b712a08-82bc-44db-a920-2b4144103ef1/tokens/colors.css">
+<link rel="stylesheet" href="_ds/stemple-design-system-8b712a08-82bc-44db-a920-2b4144103ef1/tokens/typography.css">
+<link rel="stylesheet" href="_ds/stemple-design-system-8b712a08-82bc-44db-a920-2b4144103ef1/tokens/spacing.css">
+<link rel="stylesheet" href="_ds/stemple-design-system-8b712a08-82bc-44db-a920-2b4144103ef1/tokens/fig-tokens.css">
+<link rel="stylesheet" href="_ds/stemple-design-system-8b712a08-82bc-44db-a920-2b4144103ef1/styles.css">
+<link rel="stylesheet" href="css/site.css">
+<style>
+/* Static SEO/AI-crawler content shell — replaced by the React app on mount. See js/app.jsx. */
+.sf-wrap{max-width:960px;margin:0 auto;padding:48px 24px;font-family:Georgia,'Cormorant Garamond',serif;color:#1a1a1a;line-height:1.6}
+.sf-wrap h1{font-size:clamp(28px,5vw,48px);margin:.2em 0}
+.sf-wrap h2{font-size:clamp(22px,3.4vw,32px);margin:1.6em 0 .4em}
+.sf-wrap h3{font-size:1.15em;margin:1em 0 .3em}
+.sf-wrap nav a{margin-right:16px}
+.sf-wrap blockquote{margin:1em 0;padding-left:1em;border-left:3px solid #d4af37}
+</style>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js" integrity="sha384-CjloA8y00+1SDAUkjs099PVfnY2KmDC2BZnws9kh8D/lX1s46w6EPhpXdqMfjK6i" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="stemple-splash" aria-hidden="true"><img src="assets/stemple-logo.jpeg" alt="Stemple"><span class="pulse"></span></div>
+<style>#stemple-splash{position:fixed;inset:0;z-index:9999;background:#f3f1ec;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;transition:opacity .6s ease,visibility .6s}#stemple-splash.gone{opacity:0;visibility:hidden;pointer-events:none}#stemple-splash img{width:min(180px,32vw);height:auto;filter:drop-shadow(0 8px 30px rgba(31,42,68,.12));animation:sp-fade 1.2s ease-out both}#stemple-splash .pulse{width:40px;height:2px;background:#39C6B2;border-radius:2px;position:relative;overflow:hidden}#stemple-splash .pulse::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#f3f1ec 50%,transparent);animation:sp-sweep 1.2s linear infinite}@keyframes sp-fade{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}@keyframes sp-sweep{from{transform:translateX(-100%)}to{transform:translateX(100%)}}@media(prefers-reduced-motion:reduce){#stemple-splash img,#stemple-splash .pulse::before{animation:none}}</style>
+<script>window.addEventListener('load',function(){setTimeout(function(){var s=document.getElementById('stemple-splash');if(s){s.classList.add('gone');setTimeout(function(){s.remove();},700);}},450);});</script>
+<div id="ring"></div>
+<div id="cursor"></div>
+<div id="root"><div class="sf-wrap">
+  <header id="top">
+    <p>The zero-knowledge command desk for India&rsquo;s law firms</p>
+    <h1>Where Judgment Meets Certainty.</h1>
+    <nav aria-label="Primary">
+      <a href="#casedesk">Case Desk</a>
+      <a href="#security">Security</a>
+      <a href="#journey">Journey</a>
+      <a href="#voices">Reviews</a>
+      <a href="#demo">Book a Secure Demo</a>
+    </nav>
+  </header>
+  <main>
+    <section id="principle">
+      <p>A lawyer at 10 PM, exhausted, should find the tool has already done the work; they just need to confirm it.</p>
+    </section>
+
+    <section id="casedesk">
+      <h2>Case Desk</h2>
+      <p>One surface for every live matter. The Case Desk reads the file, orders the timeline, checks the citations and tracks the billable minute — so the advocate arrives already prepared.</p>
+      <h3>Slide-in, not rip-and-replace</h3>
+      <p>A plug-in layer over Word and Outlook. Your team adopts it without learning a new ecosystem — friction eliminated on day one.</p>
+      <h3>Citation verification, in-panel</h3>
+      <p>Runs beside the draft, verifying citations automatically and neutralising the risk of citing ghost cases.</p>
+      <h3>Passive activity monitoring</h3>
+      <p>Captures billable work as it happens across the matter — closing the billing leakage most firms never see.</p>
+      <h3>Offline-first courtroom mode</h3>
+      <p>Edge databases keep the desk working inside shielded courtrooms, syncing the moment you reconnect.</p>
+    </section>
+
+    <section id="inside">
+      <h2>Inside the Vault</h2>
+      <p>Every matter lives inside an encrypted vault only your firm can open. We can't read your files — and neither can anyone else.</p>
+      <ul>
+        <li>AES-256 end-to-end encryption</li>
+        <li>Only your firm holds the keys</li>
+        <li>Full offline vault on Windows</li>
+      </ul>
+    </section>
+
+    <section id="security">
+      <h2>Privilege enforced by the immutable laws of mathematics.</h2>
+      <h3>Zero-Knowledge Architecture</h3>
+      <p>Absolute privilege, mathematically enforced by end-to-end encryption. We cannot read your files — and neither can anyone else.</p>
+      <h3>DPDP Act 2023 Compliant</h3>
+      <p>Built to mathematically insulate Indian law firms from cloud breaches, under the Digital Personal Data Protection Act.</p>
+      <h3>Offline-First Capabilities</h3>
+      <p>Work seamlessly in shielded courtrooms with edge databases that sync the moment a connection returns.</p>
+      <h3>GDPR Compliance</h3>
+      <p>Extending the same zero-knowledge guarantees to European data-residency requirements. (Under process.)</p>
+    </section>
+
+    <section id="journey">
+      <h2>Rolling out across India, firm by firm.</h2>
+      <p>We're onboarding our first litigation firms in Maharashtra and Delhi-NCR now, then expanding city by city. Every city goes live with the courts local firms actually file in.</p>
+      <ul>
+        <li>Delhi-NCR — Pilot open (Gautam Budh Nagar District Court, Delhi Saket Court, Rohini Court Bar Association)</li>
+        <li>Mumbai — Waitlist open (Bombay High Court, City Civil Court, DRT Mumbai, NCLT Mumbai)</li>
+        <li>Pune — Waitlist open (District &amp; Sessions Court, Small Causes Court, DRT Pune, Consumer Commission)</li>
+        <li>Bengaluru — Waitlist open (Karnataka High Court, City Civil Court, DRT Bengaluru, NCLT Bengaluru)</li>
+        <li>Hyderabad — Waitlist open (Telangana High Court, City Civil Court, DRT Hyderabad, NCLT Hyderabad)</li>
+        <li>Ahmedabad — Waitlist open (Gujarat High Court, City Civil Court, DRT Ahmedabad, NCLT Ahmedabad)</li>
+        <li>Chennai — Planned 2027 (Madras High Court, City Civil Court, DRT Chennai, NCLT Chennai)</li>
+        <li>Kolkata — Planned 2027 (Calcutta High Court, City Civil Court, DRT Kolkata, NCLT Kolkata)</li>
+        <li>Chandigarh — Planned 2027 (Punjab &amp; Haryana High Court, District Courts, DRT Chandigarh, Consumer Commission)</li>
+      </ul>
+    </section>
+
+    <section id="voices">
+      <h2>The practitioners who trust the desk.</h2>
+      <blockquote>
+        <p>Stemple's &lsquo;slide in&rsquo; approach is exactly what our firm needed. By integrating as a plug-in layer over our existing tools like Word and Outlook, we eliminated friction without forcing our team to learn an entirely new ecosystem. Furthermore, the passive activity monitoring has completely stopped our billing leakage.</p>
+        <footer>Rajesh Singh, Managing Partner</footer>
+      </blockquote>
+      <blockquote>
+        <p>As a corporate legal department, security is our absolute top priority. Built on a military-grade, zero-knowledge hybrid architecture, Stemple ensures that our attorney-client privilege is enforced by the immutable laws of mathematics. In the era of the DPDP Act 2023, this mathematically insulates us from cloud breaches.</p>
+        <footer>Shubham Mishra, General Counsel</footer>
+      </blockquote>
+      <blockquote>
+        <p>What happens when LegalTech tries to replace the lawyer? Hallucinated precedents and missed nuances. Stemple is completely different. We don't use it to draft our petitions. Instead, it operates directly in a side panel alongside our drafts, automatically verifying citations and completely neutralizing the risk of citing 'ghost cases'.</p>
+        <footer>Ashok Singh, Senior Advocate</footer>
+      </blockquote>
+    </section>
+
+    <section id="values">
+      <p>Your matters, deadlines, and billing in one workspace — designed for firms running on Excel, WhatsApp and Outlook today.</p>
+      <h3>Deadlines that don't slip</h3>
+      <p>Every limitation date computed under the Limitation Act, with 7-day and 48-hour warnings. The date is tracked before you have to remember it.</p>
+      <h3>Billing without the month-end scramble</h3>
+      <p>Time captured as you work and turned into GST-compliant invoices — place of supply, CGST/SGST split, GSTIN, all handled.</p>
+      <h3>Works with no signal</h3>
+      <p>Full offline access on Windows. Draft, log time, and update matters in a courtroom basement; it syncs the moment you reconnect.</p>
+    </section>
+
+    <section id="team">
+      <h2>Built by the people who understand the stakes of privilege.</h2>
+      <ul>
+        <li>Samarth Shukla — Co-Founder &amp; CEO</li>
+        <li>Devansh Srivastava — Co-Founder &amp; CIO</li>
+        <li>Mehul Mendhiratta — Co-Founder &amp; COO</li>
+        <li>Aditya Daryani — Co-Founder &amp; CMO</li>
+        <li>Aditya Raj — Dev-Ops Engineer</li>
+        <li>Yash Sharma — AI &amp; ML Developer</li>
+        <li>Ravindra Katarki — Technical Advisor</li>
+        <li>Pranshu Patidar — Investor</li>
+        <li>Mayank Narayan — Investor</li>
+      </ul>
+    </section>
+
+    <section id="demo">
+      <h2>Start your secure practice.</h2>
+      <p>See the Case Desk run against a live matter. We'll walk your firm through the zero-knowledge vault, citation checks and billing capture in under thirty minutes.</p>
+      <p>Security posture: Zero-knowledge. Response: within 1 business day. Based in India.</p>
+      <p>Contact: <a href="mailto:info@stemple.in">info@stemple.in</a> or <a href="mailto:stemple.legaltech@gmail.com">stemple.legaltech@gmail.com</a></p>
+    </section>
+  </main>
+  <footer>
+    <p>Your Law. Your Judgment. Our Intelligence.</p>
+    <p>Stemple &copy; 2026. All rights reserved. <a href="https://www.linkedin.com/company/stemple/">LinkedIn</a></p>
+  </footer>
+</div>
+</div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="_ds/stemple-design-system-8b712a08-82bc-44db-a920-2b4144103ef1/_ds_bundle.js"></script>
+<script src="js/config.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/mapdraw.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="js/nav.jsx"></script>
+<script type="text/babel" src="js/hero.jsx"></script>
+<script type="text/babel" src="js/showcase.jsx"></script>
+<script type="text/babel" src="js/features.jsx"></script>
+<script type="text/babel" src="js/security.jsx"></script>
+<script type="text/babel" src="js/social.jsx"></script>
+<script type="text/babel" src="js/cta.jsx"></script>
+<script type="text/babel" src="js/app.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* Stemple Typography System */
+/* Fonts: Oswald (display/massive labels), Inter (headlines + labels), Roboto (body/nav) */
+
+:root {
+  --font-display: 'Oswald', sans-serif; /* @kind font */
+  --font-headline: 'Inter', sans-serif; /* @kind font */
+  --font-body: 'Roboto', sans-serif; /* @kind font */
+
+  --fw-light: 300; /* @kind other */
+  --fw-regular: 400; /* @kind other */
+  --fw-medium: 500; /* @kind other */
+
+  /* Display — massive oversized section labels (Oswald) */
+  --fs-display-hero: clamp(100px, 16vw, 346px); /* @kind other */
+  --fs-display-section: clamp(60px, 10vw, 200px); /* @kind other */
+  --fs-display-bg: clamp(80px, 13vw, 250px); /* @kind other */
+
+  /* Headline — italic serif statements (Inter Medium Italic) */
+  --fs-headline-xl: clamp(28px, 4vw, 56px); /* @kind other */
+  --fs-headline-lg: clamp(24px, 3vw, 45px); /* @kind other */
+  --fs-headline-md: 35.7px; /* @kind other */
+
+  /* Body (Roboto) */
+  --fs-body-lg: 17.3px; /* @kind other */
+  --fs-body-md: 15.2px; /* @kind other */
+  --fs-body-sm: 15px; /* @kind other */
+
+  /* Labels + nav */
+  --fs-label: 12px; /* @kind other */
+  --fs-nav: 15.2px; /* @kind other */
+  --fs-eyebrow: 19.5px; /* @kind other */
+
+  /* Line heights */
+  --lh-tight: 0.85; /* @kind other */
+  --lh-display: 1.0; /* @kind other */
+  --lh-headline: 1.1; /* @kind other */
+  --lh-body: 1.5; /* @kind other */
+  --lh-relaxed: 1.6; /* @kind other */
+
+  /* Letter spacing */
+  --ls-display: -0.01em; /* @kind other */
+  --ls-wide: 0.2em; /* @kind other */
+  --ls-caps: 0.12em; /* @kind other */
+  --ls-label: 0.14em; /* @kind other */
+}

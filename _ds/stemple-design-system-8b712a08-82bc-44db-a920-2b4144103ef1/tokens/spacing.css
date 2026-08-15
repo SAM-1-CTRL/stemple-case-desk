@@ -1,0 +1,32 @@
+/* Stemple Spacing System */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --space-40: 160px;
+
+  /* Layout */
+  --gutter: 60px;
+  --max-width: 1920px;
+
+  /* Border radius (from Figma exact values) */
+  --radius-xs: 2.17px;
+  --radius-sm: 4.77px;
+  --radius-md: 6.5px;
+  --radius-lg: 10.83px;
+
+  /* Stroke weights */
+  --border-thin: 0.557px;
+  --border-sm: 1px;
+  --border-md: 1.36px;
+}

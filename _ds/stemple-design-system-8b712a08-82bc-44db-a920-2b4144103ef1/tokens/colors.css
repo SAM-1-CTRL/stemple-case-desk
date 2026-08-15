@@ -1,0 +1,44 @@
+/* Stemple Color System — derived from White Desert design language */
+:root {
+  /* Brand primaries */
+  --color-navy: rgb(31,42,68);
+  --color-deep-black: rgb(9,11,16);
+  --color-cream: rgb(243,241,236);
+  --color-mushroom: rgb(233,231,225);
+  --color-orange: rgb(255,126,21);
+  --color-cyan: rgb(106,240,255);
+  --color-white: rgb(255,255,255);
+
+  /* Neutrals */
+  --color-charcoal: rgb(83,83,83);
+  --color-ash: rgb(44,55,75);
+  --color-beige: rgb(220,216,204);
+  --color-light-grey: rgb(245,245,245);
+  --color-mid-grey: rgb(186,186,186);
+
+  /* Semantic */
+  --color-text-dark: rgb(31,42,68);
+  --color-text-light: rgb(255,255,255);
+  --color-text-muted: rgb(83,83,83);
+  --color-bg-dark: rgb(9,11,16);
+  --color-bg-light: rgb(243,241,236);
+  --color-bg-surface: rgb(18,20,26);
+  --color-accent: rgb(255,126,21);
+  --color-accent-2: rgb(106,240,255);
+
+  /* Overlays */
+  --color-overlay-dark: rgba(0,0,0,0.6);
+  --color-overlay-navy: rgba(31,42,68,0.5);
+  --color-overlay-light: rgba(255,255,255,0.2);
+  --color-overlay-hero: rgba(9,11,16,0.4);
+
+  /* Alpha variants */
+  --color-navy-20: rgba(31,42,68,0.2);
+  --color-navy-50: rgba(31,42,68,0.5);
+  --color-white-20: rgba(255,255,255,0.2);
+  --color-white-40: rgba(255,255,255,0.4);
+  --color-white-80: rgba(255,255,255,0.8);
+  --color-black-10: rgba(0,0,0,0.1);
+  --color-black-20: rgba(0,0,0,0.2);
+  --color-black-60: rgba(0,0,0,0.6);
+}

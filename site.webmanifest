@@ -1,0 +1,13 @@
+{
+  "name": "Stemple — Case Desk",
+  "short_name": "Stemple",
+  "description": "The zero-knowledge command desk for India's law firms.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F3F1EC",
+  "theme_color": "#0b0d12",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "assets/stemple-logo.jpeg", "sizes": "512x512", "type": "image/jpeg" }
+  ]
+}
