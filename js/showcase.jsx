@@ -51,49 +51,22 @@ function CaseDesk(){
     <section className="section casedesk" id="casedesk">
       <div className="wrap">
         <div className="cd-head">
-          <div>
+          <div className="cd-headline">
             <div className="rv"><span className="eyebrow">Flagship Module</span></div>
-            <h2 className="cd-title rv rv-2">Case <em>Desk</em></h2>
+            <h2 className="cd-title rv rv-2" aria-label="Case Desk">
+              <span className="cd-word">Case</span>
+              <span className="cd-sep" aria-hidden="true"><span className="cd-diamond"></span></span>
+              <span className="cd-word cd-word-alt">Desk</span>
+            </h2>
+            <div className="cd-serial rv rv-3">Est. 2026 · Zero-Knowledge · Made in India</div>
           </div>
           <p className="cd-lead rv rv-3">One surface for every live matter. The Case Desk reads the file, orders the timeline, checks the citations and tracks the billable minute &mdash; so the advocate arrives already prepared.</p>
         </div>
 
         <div className="cd-stage">
-          <div className="macwin rv rv-2" data-cursor>
-            <div className="mac-bar">
-              <div className="mac-lights"><span></span><span></span><span></span></div>
-              <div className="mac-title">Stemple &mdash; Case Desk</div>
-            </div>
-            <div className="mac-toolbar">
-              <span className="mock-tabs"><span>Matters</span><span className="on">Desk</span><span>Drafting</span><span>Billing</span></span>
-              <span className="tb-status">Vault open &middot; Synced</span>
-            </div>
-            <div className="mock-body">
-              <aside className="mock-side">
-                <div className="mrow on"><span className="ic"></span>Active Desk</div>
-                <div className="mrow"><span className="ic"></span>Cause List</div>
-                <div className="mrow"><span className="ic"></span>Citations</div>
-                <div className="mrow"><span className="ic"></span>Documents</div>
-                <div className="mrow"><span className="ic"></span>Time & Billing</div>
-                <div className="mrow"><span className="ic"></span>Vault</div>
-              </aside>
-              <div className="mock-main">
-                <div className="matter">
-                  <h4>Mehta v. Union of India</h4>
-                  <span className="tag live">● Hearing today</span>
-                </div>
-                <div className="matter-sub">W.P. (C) 4821/2026 · High Court of Delhi · Bench II · 11:30 AM</div>
-                <div className="timeline">
-                  <div className="tl done"><div className="t">Petition filed &amp; indexed</div><div className="d">Auto-tagged · 04 Jun</div></div>
-                  <div className="tl done"><div className="t">Counter-affidavit reviewed</div><div className="d">AI summary ready · 09 Jul</div></div>
-                  <div className="tl now"><div className="t">Rejoinder — final pass</div><div className="d">In progress · 12 citations checked</div></div>
-                  <div className="tl"><div className="t">Oral submission brief</div><div className="d">Drafted from timeline · pending review</div></div>
-                </div>
-                <div className="cite">
-                  <b>Citation check</b> — 12 of 12 authorities verified against reporters. <b>1 flag:</b> (2019) 4 SCC 221 cited for a holding it does not contain. Ghost-case risk neutralised.
-                </div>
-              </div>
-            </div>
+          <div className="cd-shot rv rv-2" data-cursor>
+            <img src="assets/case-desk-macos.png" alt="Stemple Case Desk running on macOS" loading="lazy"/>
+            <span className="cd-shine" aria-hidden="true"></span>
           </div>
 
           <div className="cd-feats">
