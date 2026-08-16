@@ -100,7 +100,7 @@
   </div>
 </div>
 <style>
-#stemple-splash{position:fixed;inset:0;z-index:9999;background:radial-gradient(120% 90% at 50% 40%,#f7f5f0 0%,#eeebe3 55%,#e6e2d8 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .6s cubic-bezier(.6,0,.2,1),visibility .6s;font-family:'Inter',system-ui,sans-serif}
+#stemple-splash{position:fixed;inset:0;z-index:9999;background:radial-gradient(120% 90% at 50% 40%,#f7f5f0 0%,#eeebe3 55%,#e6e2d8 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .85s cubic-bezier(.4,0,.2,1),visibility .85s;font-family:'Inter',system-ui,sans-serif}
 #stemple-splash.gone{opacity:0;visibility:hidden;pointer-events:none;transform:scale(1.03);filter:blur(6px)}
 #stemple-splash .ss-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(31,42,68,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(31,42,68,.055) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(closest-side at 50% 50%,#000 30%,transparent 78%);animation:ss-grid-in 1.2s ease-out both}
 #stemple-splash .ss-orb{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,126,21,.28),rgba(255,126,21,0) 70%);filter:blur(30px);opacity:0;animation:ss-orb 3s ease-out .2s forwards}
@@ -147,7 +147,7 @@
 @keyframes ss-logo-big{to{width:min(260px,42vw);height:min(260px,42vw);padding:18px;border-radius:22px;box-shadow:0 24px 60px rgba(31,42,68,.18)}}
 @media(prefers-reduced-motion:reduce){#stemple-splash *{animation-duration:.01s !important;animation-delay:0s !important;animation-iteration-count:1 !important}}
 </style>
-<script>window.addEventListener('load',function(){setTimeout(function(){var s=document.getElementById('stemple-splash');if(s){s.classList.add('gone');setTimeout(function(){s.remove();},650);}},4400);});</script>
+<script>window.addEventListener('load',function(){setTimeout(function(){var s=document.getElementById('stemple-splash');if(s){s.classList.add('gone');setTimeout(function(){s.remove();},850);}},3100);});</script>
 <div id="ring"></div>
 <div id="cursor"></div>
 <div id="root"><div class="sf-wrap">

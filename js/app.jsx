@@ -6,7 +6,7 @@ const FOOTER_COLS = [
   { h:'Platform', l:[{t:'Case Desk',href:'#casedesk'},{t:'Drafting Review',href:'#'},{t:'Contract Lifecycle',href:'#'},{t:'IP Management',href:'#'}] },
   { h:'Security', l:[{t:'Zero-Knowledge Architecture',href:'#inside'},{t:'DPDP Act 2023',href:'#'},{t:'Offline-First',href:'#'},{t:'Accessibility Statement',href:'#'}] },
   { h:'Company', l:[{t:'About',href:'#'},{t:'Our Journey',href:'#journey'},{t:'Team',href:'#team'},{t:'LinkedIn',href:'https://www.linkedin.com/company/stemple/',ext:true}] },
-  { h:'Get in touch', l:[{t:'Book a Secure Demo',href:'#demo'},{t:'info@stemple.in',href:'mailto:info@stemple.in'},{t:'stemple.legaltech@gmail.com',href:'mailto:stemple.legaltech@gmail.com'}] },
+  { h:'Get in touch', l:[{t:'Book a Secure Demo',href:'#demo'},{t:'info@stemple.in',href:'mailto:info@stemple.in'}] },
 ];
 
 function SiteFooter(){
