@@ -66,9 +66,88 @@
 <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js" integrity="sha384-Ukv1p/xTma6P4/2bY5KzWBw+ydSpXmhCMtyciIQVDJ1RmOxtCYNMF1uXT9T63H67" crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="stemple-splash" aria-hidden="true"><img src="assets/stemple-logo.jpeg" alt="Stemple"><span class="pulse"></span></div>
-<style>#stemple-splash{position:fixed;inset:0;z-index:9999;background:#f3f1ec;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:34px;transition:opacity .6s ease,visibility .6s}#stemple-splash.gone{opacity:0;visibility:hidden;pointer-events:none}#stemple-splash img{width:min(180px,32vw);height:auto;filter:drop-shadow(0 8px 30px rgba(31,42,68,.12));animation:sp-fade 1.2s ease-out both}#stemple-splash .pulse{width:40px;height:2px;background:#39C6B2;border-radius:2px;position:relative;overflow:hidden}#stemple-splash .pulse::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,#f3f1ec 50%,transparent);animation:sp-sweep 1.2s linear infinite}@keyframes sp-fade{from{opacity:0;transform:translateY(8px) scale(.98)}to{opacity:1;transform:none}}@keyframes sp-sweep{from{transform:translateX(-100%)}to{transform:translateX(100%)}}@media(prefers-reduced-motion:reduce){#stemple-splash img,#stemple-splash .pulse::before{animation:none}}</style>
-<script>window.addEventListener('load',function(){setTimeout(function(){var s=document.getElementById('stemple-splash');if(s){s.classList.add('gone');setTimeout(function(){s.remove();},700);}},450);});</script>
+<div id="stemple-splash" aria-hidden="true">
+  <div class="ss-grid"></div>
+  <div class="ss-orb"></div>
+  <div class="ss-stage">
+    <div class="ss-mark">
+      <svg class="ss-rings" viewBox="0 0 240 240" fill="none">
+        <circle cx="120" cy="120" r="112" stroke="rgba(31,42,68,.08)" stroke-width="1"/>
+        <circle class="ss-r1" cx="120" cy="120" r="96" stroke="#1f2a44" stroke-width="1.2" stroke-dasharray="4 8" pathLength="1"/>
+        <circle class="ss-r2" cx="120" cy="120" r="78" stroke="#ff7e15" stroke-width="1.5" stroke-dasharray="1 220" pathLength="1"/>
+        <circle class="ss-r3" cx="120" cy="120" r="60" stroke="rgba(31,42,68,.35)" stroke-width="1"/>
+      </svg>
+      <svg class="ss-lock" viewBox="0 0 120 140" fill="none" stroke="#1f2a44" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path class="ss-shackle" d="M34 68 V44 a26 26 0 0 1 52 0 V68" pathLength="1"/>
+        <rect class="ss-body" x="22" y="68" width="76" height="58" rx="4" pathLength="1"/>
+        <path class="ss-keyhole" d="M60 92 v14" stroke="#ff7e15" stroke-width="4"/>
+        <circle class="ss-keydot" cx="60" cy="88" r="4" fill="#ff7e15" stroke="none"/>
+        <path class="ss-check" d="M40 98 L55 114 L84 82" stroke="#ff7e15" stroke-width="5" pathLength="1"/>
+      </svg>
+      <img class="ss-logo" src="assets/stemple-logo.jpeg" alt="Stemple">
+      <div class="ss-flare"></div>
+    </div>
+    <div class="ss-meta">
+      <span class="ss-dot"></span><span class="ss-code">STEMPLE // ZERO-KNOWLEDGE HANDSHAKE</span>
+    </div>
+    <div class="ss-progress"><span></span></div>
+    <div class="ss-msg" aria-live="polite">
+      <span class="ss-msg-word" style="--d:0s">You</span>
+      <span class="ss-msg-word" style="--d:.06s">are</span>
+      <span class="ss-msg-word" style="--d:.12s">now</span>
+      <span class="ss-msg-word ss-msg-hl" style="--d:.20s">secured</span>
+    </div>
+  </div>
+</div>
+<style>
+#stemple-splash{position:fixed;inset:0;z-index:9999;background:radial-gradient(120% 90% at 50% 40%,#f7f5f0 0%,#eeebe3 55%,#e6e2d8 100%);display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity .6s cubic-bezier(.6,0,.2,1),visibility .6s;font-family:'Inter',system-ui,sans-serif}
+#stemple-splash.gone{opacity:0;visibility:hidden;pointer-events:none;transform:scale(1.03);filter:blur(6px)}
+#stemple-splash .ss-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(31,42,68,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(31,42,68,.055) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(closest-side at 50% 50%,#000 30%,transparent 78%);animation:ss-grid-in 1.2s ease-out both}
+#stemple-splash .ss-orb{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,126,21,.28),rgba(255,126,21,0) 70%);filter:blur(30px);opacity:0;animation:ss-orb 3s ease-out .2s forwards}
+#stemple-splash .ss-stage{position:relative;display:flex;flex-direction:column;align-items:center;gap:22px}
+#stemple-splash .ss-mark{position:relative;width:240px;height:240px;display:flex;align-items:center;justify-content:center}
+#stemple-splash .ss-rings{position:absolute;inset:0;width:100%;height:100%;animation:ss-fade-out .5s ease-out 3.0s forwards}
+#stemple-splash .ss-r1{transform-origin:120px 120px;animation:ss-spin 12s linear infinite}
+#stemple-splash .ss-r2{transform-origin:120px 120px;animation:ss-r2-fill 1.6s cubic-bezier(.7,0,.3,1) .3s forwards, ss-spin 6s linear 1.9s infinite}
+#stemple-splash .ss-r3{opacity:0;animation:ss-r3-in .7s ease-out 1.4s forwards}
+#stemple-splash .ss-lock{position:absolute;width:88px;height:104px;overflow:visible;opacity:0;transform:translateY(4px);animation:ss-lock-in .5s cubic-bezier(.2,.9,.3,1) .35s forwards, ss-fade-out .5s ease-out 3.0s forwards}
+#stemple-splash .ss-shackle{stroke-dasharray:1;stroke-dashoffset:1;transform-origin:60px 68px;animation:ss-draw .55s ease-out .55s forwards, ss-clank .28s cubic-bezier(.5,1.6,.5,1) 1.15s forwards}
+#stemple-splash .ss-body{stroke-dasharray:1;stroke-dashoffset:1;animation:ss-draw .5s ease-out .75s forwards}
+#stemple-splash .ss-keyhole,#stemple-splash .ss-keydot{opacity:0;animation:ss-key-fade .3s ease-out 1.45s forwards}
+#stemple-splash .ss-check{stroke-dasharray:1;stroke-dashoffset:1;opacity:0;animation:ss-check-in .5s cubic-bezier(.2,.9,.3,1) 1.75s forwards}
+#stemple-splash .ss-logo{position:absolute;left:50%;top:50%;width:56px;height:56px;object-fit:contain;border-radius:10px;background:#f3f1ec;padding:6px;box-shadow:0 6px 20px rgba(31,42,68,.12);opacity:0;transform:translate(-50%,-50%) scale(.6);animation:ss-logo-in .5s cubic-bezier(.2,1.4,.4,1) 2.05s forwards, ss-logo-big 1s cubic-bezier(.2,.9,.3,1) 3.05s forwards}
+#stemple-splash .ss-flare{position:absolute;inset:-40px;border-radius:50%;background:conic-gradient(from 0deg,transparent 0deg,rgba(255,126,21,.45) 40deg,transparent 90deg,transparent 360deg);opacity:0;filter:blur(8px);mix-blend-mode:screen;animation:ss-flare 1.4s cubic-bezier(.4,.9,.3,1) 1.65s forwards}
+#stemple-splash .ss-meta{display:flex;align-items:center;gap:10px;font-size:11px;letter-spacing:.28em;color:rgba(31,42,68,.55);text-transform:uppercase;opacity:0;transform:translateY(6px);animation:ss-fade-up .5s ease-out .5s forwards, ss-fade-out .5s ease-out 3.0s forwards}
+#stemple-splash .ss-dot{width:6px;height:6px;border-radius:50%;background:#ff7e15;box-shadow:0 0 0 0 rgba(255,126,21,.55);animation:ss-pulse 1.4s ease-out infinite}
+#stemple-splash .ss-progress{width:220px;height:2px;background:rgba(31,42,68,.09);border-radius:2px;overflow:hidden;opacity:0;animation:ss-fade-in .4s ease-out .55s forwards, ss-fade-out .5s ease-out 3.0s forwards}
+#stemple-splash .ss-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#1f2a44,#ff7e15);border-radius:2px;animation:ss-prog 2.2s cubic-bezier(.6,.05,.3,1) .55s forwards}
+#stemple-splash .ss-msg{position:relative;display:flex;gap:.35em;font-family:'Inter',system-ui,sans-serif;font-style:italic;font-weight:500;font-size:clamp(20px,2.6vw,30px);letter-spacing:.005em;color:#1f2a44;margin-top:4px;animation:ss-fade-out .5s ease-out 3.0s forwards}
+#stemple-splash .ss-msg-word{display:inline-block;opacity:0;transform:translateY(14px) skewY(4deg);filter:blur(6px);animation:ss-word-in .55s cubic-bezier(.2,.9,.3,1) forwards;animation-delay:calc(2.15s + var(--d))}
+#stemple-splash .ss-msg-hl{color:#ff7e15;position:relative}
+#stemple-splash .ss-msg-hl::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:#ff7e15;transform-origin:left;transform:scaleX(0);animation:ss-underline .5s cubic-bezier(.6,0,.2,1) 2.55s forwards}
+@keyframes ss-grid-in{from{opacity:0;transform:scale(1.06)}to{opacity:1;transform:scale(1)}}
+@keyframes ss-orb{0%{opacity:0;transform:scale(.7)}40%{opacity:.9}100%{opacity:.55;transform:scale(1.05)}}
+@keyframes ss-spin{to{transform:rotate(360deg)}}
+@keyframes ss-r2-fill{to{stroke-dasharray:1 0}}
+@keyframes ss-r3-in{to{opacity:1}}
+@keyframes ss-lock-in{to{opacity:1;transform:none}}
+@keyframes ss-draw{to{stroke-dashoffset:0}}
+@keyframes ss-clank{0%{transform:translateY(-6px)}60%{transform:translateY(2px)}100%{transform:translateY(0)}}
+@keyframes ss-key-fade{to{opacity:1}}
+@keyframes ss-check-in{0%{opacity:0;stroke-dashoffset:1}30%{opacity:1}100%{opacity:1;stroke-dashoffset:0}}
+@keyframes ss-logo-in{to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+@keyframes ss-flare{0%{opacity:0;transform:rotate(0deg) scale(.6)}40%{opacity:.9}100%{opacity:0;transform:rotate(320deg) scale(1.2)}}
+@keyframes ss-fade-up{to{opacity:1;transform:none}}
+@keyframes ss-fade-in{to{opacity:1}}
+@keyframes ss-pulse{0%{box-shadow:0 0 0 0 rgba(255,126,21,.55)}70%{box-shadow:0 0 0 10px rgba(255,126,21,0)}100%{box-shadow:0 0 0 0 rgba(255,126,21,0)}}
+@keyframes ss-prog{0%{width:0}60%{width:82%}100%{width:100%}}
+@keyframes ss-word-in{to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes ss-underline{to{transform:scaleX(1)}}
+@keyframes ss-fade-out{to{opacity:0}}
+@keyframes ss-logo-big{to{width:min(260px,42vw);height:min(260px,42vw);padding:18px;border-radius:22px;box-shadow:0 24px 60px rgba(31,42,68,.18)}}
+@media(prefers-reduced-motion:reduce){#stemple-splash *{animation-duration:.01s !important;animation-delay:0s !important;animation-iteration-count:1 !important}}
+</style>
+<script>window.addEventListener('load',function(){setTimeout(function(){var s=document.getElementById('stemple-splash');if(s){s.classList.add('gone');setTimeout(function(){s.remove();},650);}},4400);});</script>
 <div id="ring"></div>
 <div id="cursor"></div>
 <div id="root"><div class="sf-wrap">
