@@ -136,7 +136,7 @@ const TEAM = [
   { id:'team-4', nm:'Aditya Daryani',     rl:'Co-Founder & CMO', disc:'Marketing expert' },
   { id:'team-5', nm:'Aditya Raj',         rl:'Dev-Ops Engineer', disc:'SAAS EXPERT' },
   { id:'team-6', nm:'Yash Sharma',        rl:'AI & ML Developer', disc:'Machine learning' },
-  { id:'team-7', nm:'Ravindra Katarki',   rl:'Technical Advisor', disc:'Cryptography EXPERT' },
+  { id:'team-7', nm:'Ravindra Katarki',   rl:'Technical Advisor', disc:'BLOCKCHAIN EXPERT' },
   { id:'team-8', nm:'Pranshu Patidar',    rl:'Investor',          disc:'Business operation' },
   { id:'team-9', nm:'Mayank Narayan',     rl:'Investor',          disc:'Backend Engineering' },
 ];
