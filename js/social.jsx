@@ -196,7 +196,7 @@ function TeamCarousel(){
           <div className="member" key={m.id}>
             <div className="ph">
               <span className="disc">{m.disc}</span>
-              <img src={(window.STEMPLE_IMG&&window.STEMPLE_IMG[m.id])||`assets/slot-${m.id}.webp`} alt={m.nm} draggable="false" style={{width:'100%',height:'100%',objectFit:'cover',display:'block',pointerEvents:'none',userSelect:'none'}}/>
+              <img src={(window.STEMPLE_IMG&&window.STEMPLE_IMG[m.id])||`assets/slot-${m.id}.webp?v=2`} alt={m.nm} draggable="false" style={{width:'100%',height:'100%',objectFit:'cover',display:'block',pointerEvents:'none',userSelect:'none'}}/>
             </div>
             <div className="meta">
               <div className="nm">{m.nm}</div>
